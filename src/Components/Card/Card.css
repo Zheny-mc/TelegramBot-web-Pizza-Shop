@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #e0c521
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 150px;
+    height: 250px;
+    border: 2px solid var(--primary-color);
+    padding: 0.5rem 0.3rem;
+    margin: 13px 10px;
+    position: relative;
+}
+
+.card__title {
+    font-weight: 400;
+    text-align: center;
+}
+
