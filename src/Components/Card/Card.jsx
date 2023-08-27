@@ -17,19 +17,19 @@ function Card({food}) {
 
     return (
         <div className='card'>
-            <span className={`${count !== 0 ? "card__babge" : "card__badge--hidden"}`}>
+            <span className={`${count > 0 ? "card__badge" : "card__badge--hidden"}`}>
                 {count}
             </span>
             <div className="image__container">
                 <img src={Image} alt={title} />
             </div>
             <h4 className='card__title'>
-                {title} . <span className='card__price'>{price}</span>
+                {title} . <span className='card__price'>{price} $</span>
             </h4>
 
             <div className="btn-container">
                 <Button title={'+'} type={'add'} onClick={handlerIncrement}/>
-                {count !== 0 ? (
+                {count > 0 ? (
                     <Button title={'-'} type={'remove'} onClick={handlerDecrement}/>
                 ) : ""}
             </div>
